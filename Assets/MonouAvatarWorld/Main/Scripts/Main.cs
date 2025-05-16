@@ -176,7 +176,6 @@ public class Main: MonoBehaviour
         public void OnAvatarUpdated(GameObject go, bool isCreate, string uId){
             if(isCreate && uId==userId && userId=="guest") StartCoroutine(_loadGuestApparence());
             StartCoroutine(_updateShaders(go));
-            
             // copia el animador y esconde el render del objecto a imitar
             if(uId==userId && avatarMimic!=null && !mimicAnimatorAlready){
                 avatarMimicAni = avatarMimic.GetComponentInChildren<Animator>();
@@ -189,7 +188,7 @@ public class Main: MonoBehaviour
                     var skinnedMeshRenderer = avatarMimicAni.GetComponentInChildren<SkinnedMeshRenderer>(); if(skinnedMeshRenderer!=null) skinnedMeshRenderer.enabled=false;
                 }
                 StartCoroutine(UpdateMimic());
-            }
+            }else StartCoroutine(UpdateMimic());
             if(uId==userId && !isCreate) _isLoaded = true;
         }
         IEnumerator _loadGuestApparence(){
@@ -298,7 +297,16 @@ public class Main: MonoBehaviour
         private Animator userGOAni;
         public void SetAvatarMimic(GameObject go){
             avatarMimic = go;
-            mimicAnimatorAlready = false;
+            mimicAnimatorAlready = true;
+            userGOAni = userGO.GetComponent<Animator>();
+            avatarMimicAni = avatarMimic.GetComponent<Animator>();
+            if(avatarMimicAni == null ) avatarMimicAni = avatarMimic.GetComponentInChildren<Animator>();
+            if(avatarMimicAni != null ) userGOAni.runtimeAnimatorController = avatarMimicAni.runtimeAnimatorController;
+            userGO.GetComponent<UMA.CharacterSystem.DynamicCharacterAvatar>().raceAnimationControllers.defaultAnimationController = avatarMimicAni.runtimeAnimatorController;
+            var meshRenderers = avatarMimicAni.GetComponentsInChildren<MeshRenderer>();
+            for(int i=0; i<meshRenderers.Length; i++) if(meshRenderers[i]!=null) meshRenderers[i].enabled=false;
+            var skinnedMeshRenderer = avatarMimicAni.GetComponentsInChildren<SkinnedMeshRenderer>();
+            for(int i=0; i<skinnedMeshRenderer.Length; i++) if(skinnedMeshRenderer[i]!=null) skinnedMeshRenderer[i].enabled=false;
         }
         IEnumerator UpdateMimic(){
             do{

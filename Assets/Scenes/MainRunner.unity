@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
       propertyPath: token
-      value: 7ab5887cd2524533624f8fcc9fd081afef6830a63f7d7ae7705e07f2f76a8bdd
+      value: 246ed74350d91a1833a0c69668d67eaa23a2a47f540f79b2a78571e75cf0b705
       objectReference: {fileID: 0}
     - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
       propertyPath: prefab
