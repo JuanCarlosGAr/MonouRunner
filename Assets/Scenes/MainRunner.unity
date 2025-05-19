@@ -128,8 +128,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
+      propertyPath: env
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
       propertyPath: token
-      value: 246ed74350d91a1833a0c69668d67eaa23a2a47f540f79b2a78571e75cf0b705
+      value: 9f1684767f9f750a25f5660353eae3e0c06ea815b3c4ff04b2544e5d6593ea00
       objectReference: {fileID: 0}
     - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
       propertyPath: prefab

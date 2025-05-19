@@ -174,12 +174,12 @@ public class PlayerController : MonoBehaviour
     }
     private IEnumerator ResetIsLeft()
 {
-    yield return new WaitForSeconds(0.5f); // Esperar 0.5 segundos
+    yield return new WaitForSeconds(0.3f); // Esperar 0.5 segundos
     animator.SetBool("IsLeft", false); // Restablecer el valor a falso
 }
     private IEnumerator ResetIsRight()
 {
-    yield return new WaitForSeconds(0.5f); // Esperar 0.5 segundos
+    yield return new WaitForSeconds(0.3f); // Esperar 0.5 segundos
     animator.SetBool("IsRight", false); // Restablecer el valor a falso
 }
 
