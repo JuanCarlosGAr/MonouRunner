@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float crouchDuration = 0.5f; // Duración del agacharse
     public float stunnedDuration = 0.5f; // Duración del estado atontado
 
-    private int currentLane = 2; // 0 = más a la izquierda, 2 = centro, 4 = más a la derecha
+    private int currentLane = 3; // 0 = izquierda, 1 = centro, 2 = derecha
     private bool isJumping = false;
     private bool isCrouching = false;
     private bool isStopped = false; // Indica si el jugador está detenido
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponentInChildren<Animator>(); // Obtener el componente Animator
-        targetPosition = new Vector3((currentLane - 2) * laneDistance, transform.position.y, transform.position.z); // 5 carriles
+        targetPosition = new Vector3((currentLane - 3) * laneDistance, transform.position.y, transform.position.z); // Posición inicial en el carril central
         originalY = transform.position.y; // Guardar la posición inicial en Y
         originalRotation = transform.rotation; // Guardar la rotación inicial
 
@@ -57,8 +57,8 @@ public class PlayerController : MonoBehaviour
     Vector3 startPosition = transform.position;
     Vector3 targetPosition = startPosition + (-Vector3.forward * 2f); // Ajusta la fuerza del empuje
 
-    float elapsedTime = 0.2f;
-    float duration = 0.3f; // Duración del movimiento hacia atrás
+    float elapsedTime = 0f;
+    float duration = 0.5f; // Duración del movimiento hacia atrás
 
     // Movimiento suave hacia atrás
     while (elapsedTime < duration)
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         DetectSwipe();
 
         // Calcular posición objetivo en el carril
-        targetPosition = new Vector3((currentLane - 2) * laneDistance, transform.position.y, transform.position.z); // 5 carriles
+        targetPosition = new Vector3((currentLane - 3) * laneDistance, transform.position.y, transform.position.z);
 
         // Movimiento hacia el carril objetivo
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 10f);
@@ -134,8 +134,8 @@ public class PlayerController : MonoBehaviour
 
                     if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
                     {
-                        // Detectar deslizamiento horizontal con 5 carriles
-                        if (swipeDelta.x > 50 && currentLane < 4) // Deslizar a la derecha
+                        // Detectar deslizamiento horizontal con 7 carriles
+                        if (swipeDelta.x > 50 && currentLane < 6) // Deslizar a la derecha
                         {
                             currentLane++;
                             swipeDetected = true;
@@ -231,7 +231,6 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Crouch()
     {
-        if (isCrouching) yield break; // Evita múltiples llamadas
         isCrouching = true;
         animator.SetBool("isSlide", true);
         // Reducir el tamaño del CapsuleCollider durante el agachado

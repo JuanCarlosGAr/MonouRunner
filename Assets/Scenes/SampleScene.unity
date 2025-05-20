@@ -127,7 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 1699703572948207032, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -136,8 +135,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
     - target: {fileID: 2946141329792974686, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -178,7 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 3958348613963481802, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -8.86
@@ -219,13 +215,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
     - target: {fileID: 5629049356423435963, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
       propertyPath: m_Name
       value: RunnerMonou
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 7692044452331429523, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
       propertyPath: player
       value: 
@@ -233,11 +226,6 @@ PrefabInstance:
     - target: {fileID: 9222157357246204026, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
       propertyPath: m_IsActive
       value: 1
-=======
-    - target: {fileID: 7929847376754557270, guid: 6a2c13b4bcc09ca47bd13e4968f8ac4a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 27.59
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
