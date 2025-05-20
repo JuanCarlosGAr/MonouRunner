@@ -133,7 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
       propertyPath: token
+<<<<<<< Updated upstream
       value: 9f1684767f9f750a25f5660353eae3e0c06ea815b3c4ff04b2544e5d6593ea00
+=======
+      value: fd20050d1dc3de771ca13a0030b1fcff968643762c184967cc8b0e02012a49d6
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 655318975073944602, guid: 091f5c2bba70a67479e32179d35976c2, type: 3}
       propertyPath: prefab

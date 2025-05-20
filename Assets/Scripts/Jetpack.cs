@@ -19,7 +19,7 @@ public class Jetpack : PoweUps
 
     public override void Activate(GameObject player)
     {
-        player.transform.position += new Vector3(0, 5f, 0); // Elevar al jugador
+        player.transform.position += new Vector3(0, 14f, 0); // Elevar al jugador
         // Aquí puedes activar una barra de duración en la UI
     }
 

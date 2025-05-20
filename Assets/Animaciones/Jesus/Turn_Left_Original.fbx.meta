@@ -17,6 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
+<<<<<<< Updated upstream
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'ControlRig:ShoulderPart1_R' is inbetween
@@ -32,6 +33,9 @@ ModelImporter:
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ControlRig:HipPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ControlRig:HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+=======
+    animationImportWarnings: 
+>>>>>>> Stashed changes
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -43,6 +47,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< Updated upstream
     clipAnimations:
     - serializedVersion: 16
       name: Take 001
@@ -73,6 +78,9 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+=======
+    clipAnimations: []
+>>>>>>> Stashed changes
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -122,6 +130,7 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
+<<<<<<< Updated upstream
     human:
     - boneName: ControlRig:Root_M
       humanName: Hips
@@ -5406,6 +5415,10 @@ ModelImporter:
       position: {x: -0.00008089615, y: -0.066735685, z: 0.00013977694}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+=======
+    human: []
+    skeleton: []
+>>>>>>> Stashed changes
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
