@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
-  _duration: 5
   mainCamera: {fileID: 0}
 --- !u!135 &147606714
 SphereCollider:
@@ -554,7 +553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
-  _duration: 10
 --- !u!135 &1381770828
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -799,7 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 10
   radius: 5
-  _duration: 10
+  duration: 10
 --- !u!135 &1607048279
 SphereCollider:
   m_ObjectHideFlags: 0
