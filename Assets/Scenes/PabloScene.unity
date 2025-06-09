@@ -891,6 +891,7 @@ MonoBehaviour:
   _loopSegmentLogic: 0
   _levelCollection:
   - {fileID: 11400000, guid: 26d73d230d8075d4198504a5648ba1aa, type: 2}
+  - {fileID: 11400000, guid: da4200703fe2ef84fb753134f04d9269, type: 2}
   _levelIteration: 1
   _levelRandomizer: {fileID: 0}
   _generationRandomizer: {fileID: 11400000, guid: fb600be43607d7e47822c78754644d57, type: 2}
